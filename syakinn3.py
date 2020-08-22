@@ -24,18 +24,26 @@ class Syakin:
         self.total = None
 
     def syakinkeisan(self):
-        self.syakin = input(int('借金>')
-        self.nenri = input(float('年利率(%)>')
-        self.hensai = input(int('返済額>')
+        self.syakin = input(int('借金>'))
+        self.nenri = input(float('年利率(%)>'))
+        self.hensai = input(int('返済額>'))
 
+        self.total = 0
         self.month = 0
         while self.syakin > self.hensai:
             self.month += 1
-            self.syakin = self.syakin * (1 + nenri / 12 / 100) – hensai
-            print(str(month) + “月：　返済額“, self.hensai, ”円 残り”, self.syakin, ”円“)
+            self.syakin = self.syakin * (1 + self.nenri / 12 / 100) - self.hensai
+            print(str(self.month) ,'月：　返済額',int(self.hensai),'円 残り',self.syakin)
+            self.total += self.hensai
+        self.month += 1
+        self.syakin = self.syakin * (1 + self.nenri / 12 / 100)
+        self.total += self.syakin
+        print(str(self.month) + '月: 返済額',int(self.syakin),'円　これで完済。返済総額：',int(total),'円')
 
-　　
 
+syakinhensai = Syakin()
+
+syakinhensai.syakinkeisan()
 
 
 
