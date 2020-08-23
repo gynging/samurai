@@ -24,9 +24,9 @@ class Syakin:
         self.total = None
 
     def syakinkeisan(self):
-        self.syakin = input(int('借金>'))
-        self.nenri = input(float('年利率(%)>'))
-        self.hensai = input(int('返済額>'))
+        self.syakin = int(input('借金>'))
+        self.nenri = float(input('年利率(%)>'))
+        self.hensai = int(input('返済額>'))
 
         self.total = 0
         self.month = 0
@@ -38,7 +38,7 @@ class Syakin:
         self.month += 1
         self.syakin = self.syakin * (1 + self.nenri / 12 / 100)
         self.total += self.syakin
-        print(str(self.month) + '月: 返済額',int(self.syakin),'円　これで完済。返済総額：',int(total),'円')
+        print(str(self.month) + '月: 返済額',int(self.syakin),'円　これで完済。返済総額：',int(self.total),'円')
 
 
 syakinhensai = Syakin()
