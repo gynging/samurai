@@ -3,8 +3,6 @@
 }
 #layout1 {
     position: relative;
-    top: 20px;
-    background-color: red;
 }
 #layout2 {
     position: relative;
@@ -20,4 +18,7 @@
     position: relative;
     bottom: 20px;
     background-color: gray;
+}
+#layout5 {
+    right: 20px;
 }
